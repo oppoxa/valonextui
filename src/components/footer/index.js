@@ -9,7 +9,11 @@ const Footer = () => {
 
   return (
     <footer>
-      <Container css={{ backgroundColor: theme.colors.background.value }} className="container-footer" fluid>
+      <Container
+        css={{ backgroundColor: theme.colors.background.value, display: "flex" }}
+        className="container-footer"
+        fluid
+      >
         <Row justify="space-between" align="center">
           <Image height={50} src={logo} objectFit="contain" alt="logo" className="logo-css" />
           <Tooltip content={"C'est un jeu de bot"} rounded color="primary">

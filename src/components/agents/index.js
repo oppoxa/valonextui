@@ -11,30 +11,33 @@ import omen from "../../img/omen.png";
 import duelist from "../../img/Duelist.png";
 import neon from "../../img/neon.png";
 
+const CardAgent = ({ roleImg, role, name, agent }) => {
+  const { theme } = useTheme();
+
+  return (
+    <Card isHoverable isPressable css={{ backgroundColor: theme.colors.secondaryLight.value }}>
+      <Card.Body css={{ height: 350 }} style={{ backgroundImage: `url(${agent})` }} className="agent-css">
+        <Row justify="between">
+          <Image width={25} height={25} src={roleImg} objectFit="contain" alt="role agent" className="img-role" />
+          <Text
+            h5
+            size={15}
+            weight="bold"
+            css={{ mt: 0, textTransform: "uppercase", color: theme.colors.primary.value }}
+          >
+            {role}
+          </Text>
+        </Row>
+        <Text h4 size={20} color="white" css={{ mt: 0 }}>
+          {name}
+        </Text>
+      </Card.Body>
+    </Card>
+  );
+};
+
 const Agents = () => {
   const { theme } = useTheme();
-  const MockItem = ({ roleImg, role, name, agent }) => {
-    return (
-      <Card isHoverable isPressable css={{ backgroundColor: theme.colors.secondaryLight.value }}>
-        <Card.Body style={{ backgroundImage: `url(${agent})` }} className="agent-css">
-          <Row justify="between">
-            <Image width={25} height={25} src={roleImg} objectFit="contain" alt="role agent" className="img-role" />
-            <Text
-              h5
-              size={15}
-              weight="bold"
-              css={{ mt: 0, textTransform: "uppercase", color: theme.colors.primary.value }}
-            >
-              {role}
-            </Text>
-          </Row>
-          <Text h4 size={20} color="white" css={{ mt: 0 }}>
-            {name}
-          </Text>
-        </Card.Body>
-      </Card>
-    );
-  };
   return (
     <div className="container-agents" id="discover">
       <div className="container-slide">
@@ -55,16 +58,16 @@ const Agents = () => {
           <Spacer y={3} />
           <Grid.Container gap={2} justify="center">
             <Grid xs={6} sm={3}>
-              <MockItem roleImg={controller} role="Contrôleur" name="Viper" agent={viper} />
+              <CardAgent roleImg={controller} role="Contrôleur" name="Viper" agent={viper} />
             </Grid>
             <Grid xs={6} sm={3}>
-              <MockItem roleImg={sentinel} role="Sentinelle" name="Killjoy" agent={killjoy} />
+              <CardAgent roleImg={sentinel} role="Sentinelle" name="Killjoy" agent={killjoy} />
             </Grid>
             <Grid xs={6} sm={3}>
-              <MockItem roleImg={controller} role="Contrôleur" name="Omen" agent={omen} />
+              <CardAgent roleImg={controller} role="Contrôleur" name="Omen" agent={omen} />
             </Grid>
             <Grid xs={6} sm={3}>
-              <MockItem roleImg={duelist} role="Duelliste" name="Neon" agent={neon} />
+              <CardAgent roleImg={duelist} role="Duelliste" name="Neon" agent={neon} />
             </Grid>
           </Grid.Container>
           <Spacer y={5} />

@@ -1,22 +1,25 @@
 import React, { useState } from "react";
 import { Container, Row, Button, Col, Text, Image, Modal, Spacer } from "@nextui-org/react";
+
 import "./map.css";
+
 import sage from "../../img/sage.png";
 import power from "../../img/sage-power.png";
 
 const Map = () => {
-  const [visible, setVisible] = useState(false);
-  const handler = () => setVisible(true);
-  const closeHandler = () => {
-    setVisible(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
+
   return (
     <div className="background-map">
       <Container lg={8}>
         <Row>
           <Col className="col-left">
             <Image
-              style={{ objectPosition: "top" }}
+              css={{ objectPosition: "top" }}
               objectFit="cover"
               height={600}
               width="100%"
@@ -37,11 +40,11 @@ const Map = () => {
               VALORANT
             </Text>
             <Spacer y={1} />
-            <Button onClick={handler}>Découvrir</Button>
+            <Button onClick={toggleModal}>Découvrir</Button>
           </Col>
         </Row>
       </Container>
-      <Modal closeButton width="600px" blur aria-labelledby="modal-title" open={visible} onClose={closeHandler}>
+      <Modal closeButton width="600px" blur aria-labelledby="modal-title" open={isModalOpen} onClose={toggleModal}>
         <Modal.Header>
           <Text id="modal-title" size={18}>
             Bienvenue à{" "}
@@ -61,11 +64,6 @@ const Map = () => {
             allowfullscreen
           ></iframe>
         </Modal.Body>
-        <Modal.Footer>
-          <Button auto flat color="error" onClick={closeHandler}>
-            Fermer
-          </Button>
-        </Modal.Footer>
       </Modal>
     </div>
   );
