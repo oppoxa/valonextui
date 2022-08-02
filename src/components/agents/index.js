@@ -44,7 +44,7 @@ const Agents = () => {
         <div className="triangle-left" />
         <div className="triangle-right" />
         <Container lg={8}>
-          <Text h2 size="7em" weight="bold">
+          <Text h2 size="5em" weight="bold">
             LES AGENTS
           </Text>
           <Text size="1rem" weight="semibold">

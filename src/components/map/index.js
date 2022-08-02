@@ -29,7 +29,7 @@ const Map = () => {
             <Image className="power" objectFit="contain" height={200} width="100%" alt="img-power" src={power} />
           </Col>
           <Col className="col-right">
-            <Text h2 size="7rem" weight="bold">
+            <Text h2 size="5rem" weight="bold">
               LES CARTES
             </Text>
             <Text size="1rem" weight="semibold">
