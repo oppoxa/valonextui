@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "nextUI-valorant",
+		"path": "."
+	},
+	{
+		"name": "valorant-nextui",
+		"path": "..\\..\\valorant-nextui"
+	}
+],
+  "settings": {}
+}

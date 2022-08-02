@@ -1,0 +1,14 @@
+/* CSS du footer */
+
+.container-footer {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* CSS du logo */
+
+.logo-css {
+  margin: 0px !important;
+}
