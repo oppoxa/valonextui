@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div className="container-header">
       <video className="video" autoPlay muted loop>
-        <source src={videoHeader} type="video/mp4" />
+        <source src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltce292b05bc900c63/659c99223ea361883557812f/VALORANT_EP8124_001_R007_InGameHomepage_v01_For_Website_Mobile_v2.mp4" type="video/mp4" />
       </video>
       <Container fluid justify="center" className="container-css">
         <Row align="center" className="row-direction">

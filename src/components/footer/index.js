@@ -16,7 +16,7 @@ const Footer = () => {
       >
         <Row justify="space-between" align="center">
           <Image height={50} src={logo} objectFit="contain" alt="logo" className="logo-css" />
-          <Tooltip content={"C'est un jeu de bot"} rounded color="primary">
+          <Tooltip content={"Maintenant vous en savez plus !"} rounded color="primary">
             <Button auto flat color="error">
               En savoir plus
             </Button>
